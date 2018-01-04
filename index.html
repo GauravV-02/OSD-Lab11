@@ -9,10 +9,9 @@
 		<img id='image'><img>
 		<input id="Click" type="button" value="Click" onclick="update();" />		  
 		<script>
-			var image = document.querySelector('#image');
-			var load = 0;
-			document.body.style.backgroundColor = "red";			
-			  image.load = function loaded() {				
+			var img = document.querySelector('#image');
+			var load = 0;						
+			  img.onload = function loaded() {				
 				if(load == 0)
 				{
 				  load = 1;
@@ -23,10 +22,11 @@
 				  document.body.style.backgroundColor = "yellow";
 				};
 			  };
-			  image.src = "https://i0.wp.com/merrychristmas-happynewyear.org/wp-content/uploads/2017/11/new-year-1.jpg";
+			  img.src = "https://i0.wp.com/merrychristmas-happynewyear.org/wp-content/uploads/2017/11/new-year-1.jpg";
 			
 			function update() {
-				image.src = "https://i0.wp.com/merrychristmas-happynewyear.org/wp-content/uploads/2017/11/new-year-1.jpg";
+				img.src = "https://i0.wp.com/merrychristmas-happynewyear.org/wp-content/uploads/2017/11/new-year-1.jpg";
+				document.body.style.backgroundColor = "red";
 			}			
 		</script>
 	</body>
