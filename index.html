@@ -3,22 +3,7 @@
 	<head>
 		<meta charset='utf-8'>
 		<title>Lab 11</title>
-		<script>
-			var img = document.querySelector('#image');
-			var i = 0;						
-			  img.onload = function loaded() {				
-				if(i == 0)
-				{
-				  i = 1;
-				  document.body.style.backgroundColor = "red";
-				};
-				else
-				{
-				  document.body.style.backgroundColor = "yellow";
-				};
-			  };
-			  img.src = "https://i0.wp.com/merrychristmas-happynewyear.org/wp-content/uploads/2017/11/new-year-1.jpg";
-			
+		<script>			
 			function update() {
 				document.getElementById("image").src = "https://i0.wp.com/merrychristmas-happynewyear.org/wp-content/uploads/2017/11/new-year-1.jpg";
 				document.body.style.backgroundColor = "green";
@@ -27,8 +12,7 @@
 	</head> 
   
 	<body>  
-		<img id='image'><img>
+		<img src="https://i0.wp.com/merrychristmas-happynewyear.org/wp-content/uploads/2017/11/new-year-1.jpg" alt="Happy new year" width="400px" height="400px" id="image" >
 		<input id="Click" type="button" value="Click" onclick="update();" />		  
-		
 	</body>
 </html> 
