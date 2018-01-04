@@ -6,22 +6,19 @@
 	</head>  
   
 	<body>  
-		<img id='image'></img>
+		<img id='image'><img>
 		<input id="Click" type="button" value="Click" onclick="update();" />		  
 		<script>
 			var image = document.querySelector('#image');
-			var i = 0;
-			  image.load = function loaded() {
-				i++;
-				if(i == 0)
+			var loaded = 0;
+			document.body.style.backgroundColor = "red";			
+			  image.onload = function loaded() {				
+				if(loaded != 1)
 				{
-				  document.body.style.backgroundColor = "red";
-				};
-				if(i == 1)
-				{
+				  loaded = 1;
 				  document.body.style.backgroundColor = "green";
 				};
-				if(i == 2)
+				else
 				{
 				  document.body.style.backgroundColor = "yellow";
 				};
@@ -30,7 +27,6 @@
 			
 			function update() {
 				document.getElementById('image').src='https://i0.wp.com/merrychristmas-happynewyear.org/wp-content/uploads/2017/11/new-year-1.jpg';
-				document.body.style.backgroundColor = "red";
 			}			
 		</script>
 	</body>
