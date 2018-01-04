@@ -12,8 +12,8 @@
 			var image = document.querySelector('#image');
 			var load = 0;
 			document.body.style.backgroundColor = "red";			
-			  image.onload = function loaded() {				
-				if(load != 1)
+			  image.load = function loaded() {				
+				if(load == 0)
 				{
 				  load = 1;
 				  document.body.style.backgroundColor = "green";
@@ -26,7 +26,7 @@
 			  image.src = "https://i0.wp.com/merrychristmas-happynewyear.org/wp-content/uploads/2017/11/new-year-1.jpg";
 			
 			function update() {
-				image.src='https://i0.wp.com/merrychristmas-happynewyear.org/wp-content/uploads/2017/11/new-year-1.jpg';
+				image.src = "https://i0.wp.com/merrychristmas-happynewyear.org/wp-content/uploads/2017/11/new-year-1.jpg";
 			}			
 		</script>
 	</body>
