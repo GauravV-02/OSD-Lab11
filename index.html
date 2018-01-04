@@ -2,20 +2,15 @@
 <html lang="en">
 	<head>
 		<meta charset='utf-8'>
-		<title>Lab 11</title>		
-	</head>  
-  
-	<body>  
-		<img id='image'><img>
-		<input id="Click" type="button" value="Click" onclick="update();" />		  
+		<title>Lab 11</title>
 		<script>
 			var img = document.querySelector('#image');
-			var load = 0;						
+			var i = 0;						
 			  img.onload = function loaded() {				
-				if(load == 0)
+				if(i == 0)
 				{
-				  load = 1;
-				  document.body.style.backgroundColor = "green";
+				  i = 1;
+				  document.body.style.backgroundColor = "red";
 				};
 				else
 				{
@@ -25,9 +20,15 @@
 			  img.src = "https://i0.wp.com/merrychristmas-happynewyear.org/wp-content/uploads/2017/11/new-year-1.jpg";
 			
 			function update() {
-				img.src = "https://i0.wp.com/merrychristmas-happynewyear.org/wp-content/uploads/2017/11/new-year-1.jpg";
-				document.body.style.backgroundColor = "red";
+				document.getElementById("image").src = "https://i0.wp.com/merrychristmas-happynewyear.org/wp-content/uploads/2017/11/new-year-1.jpg";
+				document.body.style.backgroundColor = "green";
 			}			
-		</script>
+		</script>		
+	</head> 
+  
+	<body>  
+		<img id='image'><img>
+		<input id="Click" type="button" value="Click" onclick="update();" />		  
+		
 	</body>
 </html> 
